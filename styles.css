@@ -707,7 +707,8 @@ a {color:#fff;}}
 	
 	.case-study-section p, 
 	.role-list li {
-		font-size: 20px;
+		font-size: 18px;
+		line-height: 1.6;
 		font-weight: 300;
 	}
 
@@ -728,6 +729,7 @@ a {color:#fff;}}
         gap: 30px; /* Slightly adjusted gap for vertical stacking */
         align-items: center;
 		margin:0 auto 40px auto;
+		padding:0px;
     }
 	.author-name {
 		position: relative;
@@ -779,8 +781,13 @@ a {color:#fff;}}
 
 @media (max-width: 768px) {
 	/* Home Page Headings */
+	.hero {
+		padding:10vh 0px;
+	}
+	
 	.hero h1 {
-		font-size: 40px;
+		font-size: 38px;
+		margin:0px;
 	}
 
 	.project-section h2 {
@@ -795,7 +802,7 @@ a {color:#fff;}}
 
 	/* Reduce intro-text font size for better mobile readability */
 	.intro-text {
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 	}
 
 	.project-section {
