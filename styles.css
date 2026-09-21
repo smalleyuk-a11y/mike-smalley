@@ -649,7 +649,7 @@ Color:#f2f4ff;
 /* --- More Work Section --- */
 
 .more-work {
- padding-top: 40px;
+ padding: 40px 24px 0 24px;
     border-top: 2px #59516b solid;
     max-width: 1000px; 	
 	 margin: 124px auto 0 auto;
