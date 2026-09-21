@@ -170,6 +170,67 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', handleScrollEffects);
 });
 
+window.addEventListener('scroll', function() {
+    const testDiv = document.querySelector('.scroll-indicator');
+    if (!testDiv) return;
+
+    let scrollY = window.scrollY;
+
+    // Fade Distance (in pixels): The distance scrolled before reaching min opacity
+    const fadeDistance = 300; 
+
+    // Calculate opacity: starts at 1, drops as scrollY increases
+    let opacity = 1 - (scrollY / fadeDistance);
+
+    // Clamp opacity between 0 (fully hidden) and 1 (fully visible)
+    if (opacity < 0) opacity = 0;
+    if (opacity > 1) opacity = 1;
+
+    testDiv.style.opacity = opacity;
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    root: null,        // Uses the viewport
+    rootMargin: "0px",
+    threshold: 0.15    // Triggers when 15% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        // Stops observing once animated into view
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Target any element with the 'fade-in-up' class
+  const animatedElements = document.querySelectorAll(".fade-in-up");
+  animatedElements.forEach(el => observer.observe(el));
+});
+
+window.addEventListener('scroll', function() {
+    const bg = document.querySelector('.site-bg-fixed');
+    if (!bg) return;
+
+    let scrollY = window.scrollY;
+
+    // 1. Parallax Effect: 
+    // Using a minus (-) sign makes it shift upwards as you scroll down
+    let parallaxSpeed = 0.3;
+    bg.style.backgroundPosition = `center ${-scrollY * parallaxSpeed}px`;
+
+    // 2. Fade Effect (stops at 0.2 opacity)
+    const fadeDistance = 300; 
+    let opacity = 1 - (scrollY / fadeDistance);
+    if (opacity < 0.5) opacity = 0.5;
+    if (opacity > 1) opacity = 1;
+
+    bg.style.opacity = opacity;
+});
 
 // =============================================================
 // NEW: jQuery Tilt Effect Implementation (Disabled on mobile)
@@ -192,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
             speed: 1200,
             glare: true,
             maxGlare: 0.2,
-            scale: 1.04
+            scale: 1.01
         });
 		
     }
