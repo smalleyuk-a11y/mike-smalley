@@ -1,201 +1,346 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YGQM02RHHT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YGQM02RHHT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-  gtag('config', 'G-YGQM02RHHT');
-</script>
+            gtag("config", "G-YGQM02RHHT");
+        </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: Grocery App Onboarding</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css"> 
-<!-- Paste this right before your closing </head> tag -->
-<script type="text/javascript">
-  (function(e,c){if(!c.__SV){var l,h;window.mixpanel=c;c._i=[];c.init=function(q,r,f){function t(d,a){var g=a.split(".");2==g.length&&(d=d[g[0]],a=g[1]);d[a]=function(){d.push([a].concat(Array.prototype.slice.call(arguments,0)))}}var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";b.people=b.people||[];b.toString=function(d){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);d||(a+=" (stub)");return a};b.people.toString=function(){return b.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders start_session_recording stop_session_recording people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-  for(h=0;h<l.length;h++)t(b,l[h]);var n="set set_once union unset remove delete".split(" ");b.get_group=function(){function d(p){a[p]=function(){b.push([g,[p].concat(Array.prototype.slice.call(arguments,0))])}}for(var a={},g=["get_group"].concat(Array.prototype.slice.call(arguments,0)),m=0;m<n.length;m++)d(n[m]);return a};c._i.push([q,r,f])};c.__SV=1.2;var k=e.createElement("script");k.type="text/javascript";k.async=!0;k.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===
-  e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=e.getElementsByTagName("script")[0];e.parentNode.insertBefore(k,e)}})(document,window.mixpanel||[])
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Milk&More: Frictionless Grocery Onboarding</title>
 
-  
-  mixpanel.init('35d2a7712e51ad86830c2700883079b8', {
-    autocapture: true,
-    record_sessions_percent: 100,
-    api_host: 'https://api-eu.mixpanel.com',
-  })
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
 
-</script>
-<!-- Hotjar Tracking Code for Portfolio -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:6777901,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-<link rel="icon" type="image/png" href="images/assets/favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="images/assets/favicon/favicon.svg" />
-<link rel="shortcut icon" href="images/assets/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="images/assets/favicon/apple-touch-icon.png" />
-<link rel="manifest" href="images/assets/site.webmanifest" />
-</head>
-<body class="casestudy">
-	<div class="site-bg-fixed"></div>
-	<div class="site-bg-scrolling"></div>
-    <header class="case-study-header-nav">
-<a href="index.html#projects" class="button back-btn">
-  <img src="images/assets/arrow-left.svg" alt="Back Icon" class="icon-svg">
-  <span class="btn-text">Case Studies</span>
-</a>
-		<a href="index.html" class="author-name"><span>Mike</span> Smalley</A>
-    </header>
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Paste this right before your closing </head> tag -->
+        <script type="text/javascript">
+            (function (e, c) {
+                if (!c.__SV) {
+                    var l, h;
+                    window.mixpanel = c;
+                    c._i = [];
+                    c.init = function (q, r, f) {
+                        function t(d, a) {
+                            var g = a.split(".");
+                            2 == g.length && ((d = d[g[0]]), (a = g[1]));
+                            d[a] = function () {
+                                d.push([a].concat(Array.prototype.slice.call(arguments, 0)));
+                            };
+                        }
+                        var b = c;
+                        "undefined" !== typeof f ? (b = c[f] = []) : (f = "mixpanel");
+                        b.people = b.people || [];
+                        b.toString = function (d) {
+                            var a = "mixpanel";
+                            "mixpanel" !== f && (a += "." + f);
+                            d || (a += " (stub)");
+                            return a;
+                        };
+                        b.people.toString = function () {
+                            return b.toString(1) + ".people (stub)";
+                        };
+                        l =
+                            "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders start_session_recording stop_session_recording people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(
+                                " "
+                            );
+                        for (h = 0; h < l.length; h++) t(b, l[h]);
+                        var n = "set set_once union unset remove delete".split(" ");
+                        b.get_group = function () {
+                            function d(p) {
+                                a[p] = function () {
+                                    b.push([g, [p].concat(Array.prototype.slice.call(arguments, 0))]);
+                                };
+                            }
+                            for (
+                                var a = {}, g = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), m = 0;
+                                m < n.length;
+                                m++
+                            )
+                                d(n[m]);
+                            return a;
+                        };
+                        c._i.push([q, r, f]);
+                    };
+                    c.__SV = 1.2;
+                    var k = e.createElement("script");
+                    k.type = "text/javascript";
+                    k.async = !0;
+                    k.src =
+                        "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL
+                            ? MIXPANEL_CUSTOM_LIB_URL
+                            : "file:" === e.location.protocol &&
+                                "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)
+                              ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
+                              : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+                    e = e.getElementsByTagName("script")[0];
+                    e.parentNode.insertBefore(k, e);
+                }
+            })(document, window.mixpanel || []);
 
-    <main class="case-study-content">
-        
-        <section class="project-details-intro">
-            <span class="project-meta-top"><span>Brand:</span> Milk&amp;More</span>
-            <h1 class="case-study-title">App Onboarding</h1>
-            <p class="case-study-summary">
-            Milk & More is a leading UK grocery box delivery service focused on convenience, fresh produce, and sustainable living. This project was a critical component of a broader redesign of the entire mobile application, for which I served as the sole UI/UX designer. 
-            </p>
+            mixpanel.init("35d2a7712e51ad86830c2700883079b8", {
+                autocapture: true,
+                record_sessions_percent: 100,
+                api_host: "https://api-eu.mixpanel.com",
+            });
+        </script>
+        <!-- Hotjar Tracking Code for Portfolio -->
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj =
+                    h.hj ||
+                    function () {
+                        (h.hj.q = h.hj.q || []).push(arguments);
+                    };
+                h._hjSettings = { hjid: 6777901, hjsv: 6 };
+                a = o.getElementsByTagName("head")[0];
+                r = o.createElement("script");
+                r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+        </script>
+        <link rel="icon" type="image/png" href="images/assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="images/assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="images/assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="images/assets/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="images/assets/site.webmanifest" />
+    </head>
+    <body class="casestudy">
+        <div class="site-bg-fixed"></div>
+        <div class="site-bg-scrolling"></div>
+        <header class="case-study-header-nav">
+            <a href="index.html#projects" class="button back-btn">
+                <img src="images/assets/arrow-left.svg" alt="Back Icon" class="icon-svg" />
+                <span class="btn-text">Case Studies</span>
+            </a>
+            <a href="index.html" class="author-name"><span>Mike</span> Smalley</a>
+        </header>
 
-			
-			
-</div>
-        </section>
+        <main class="case-study-content">
+            <section class="project-details-intro">
+                <span class="project-meta-top"><span>Milk&amp;More</span> </span>
+                <h1 class="case-study-title">Grocery Onboarding</h1>
+                <p class="case-study-summary">
+                    Milk & More is a UK grocery box delivery service focused on convenience, fresh produce and
+                    sustainable living. I was the sole UI/UX designer on a broader mobile app redesign, including the
+                    onboarding and product discovery experience.
+                </p>
+            </section>
 
-<section class="case-study-image-section">
-            <div class="case-study-image-wrapper"> 
-                <img src="images/onboarding/hero.png" alt="Milk&More Order Flow Mobile App Screens" class="case-study-main-image">
+            <section class="case-study-image-section">
+                <div class="case-study-image-wrapper">
+                    <img
+                        src="images/onboarding/hero.jpg"
+                        alt="Milk&More Order Flow Mobile App Screens"
+                        class="case-study-main-image"
+                    />
+                </div>
+            </section>
+
+            <section class="case-study-section">
+                <div class="project-specst">
+                    <div>
+                        <span>Role</span>
+                        <p>Product Design</p>
+                    </div>
+                    <div>
+                        <span>Tools</span>
+                        <p>Figma, UXCam, Mixpanel, Lyssna</p>
+                    </div>
+                    <div>
+                        <span>Timeframe</span>
+                        <p>2 months</p>
+                    </div>
+                </div>
+                <h2 class="section-title">My Role</h2>
+                <ul class="role-list">
+                    <li>Analysed user data and feedback to identify onboarding friction</li>
+                    <li>Worked with stakeholders to define user personas and needs</li>
+                    <li>Mapped user journeys and created wireframes</li>
+                    <li>Designed the onboarding and browsing experience using our design system</li>
+                    <li>Designed the store, category pages and product detail pages</li>
+                    <li>Tested the prototype with 8 participants using Lyssna</li>
+                    <li>Iterated on findings and delivered a 14% reduction in sign-up abandonment</li>
+                </ul>
+            </section>
+
+            <section class="case-study-section">
+                <h2 class="section-title">The Problem</h2>
+                <p>
+                    The app opened with a login and registration screen, giving new users no opportunity to explore the
+                    product first. Unlike typical grocery apps, Milk & More relies on postcodes upfront due to
+                    area-dependent product availability.
+                </p>
+                <p>
+                    Users couldn't browse products, understand the service or check delivery availability without
+                    registering. I needed to remove this barrier while still guiding users towards registration and
+                    purchase.
+                </p>
+            </section>
+
+            <section class="case-study-section">
+                <h2 class="section-title">Research & Insights</h2>
+                <p>
+                    I reviewed analytics, user feedback and the existing journey to understand where users were dropping
+                    out and what prevented them from exploring the service.
+                </p>
+                <p>
+                    The key insight was that users were being asked to commit before they had experienced the product.
+                    They couldn't browse products, understand the service or check availability without first creating
+                    an account. I also identified:
+                </p>
+
+                <ul class="role-list">
+                    <li>Availability varied by postcode, but users only discovered this during registration</li>
+                    <li>The service's key benefits weren't being communicated early enough</li>
+                    <li>Strict password requirements added unnecessary friction to registration</li>
+                    <li>Users needed more information to build trust before committing to an account</li>
+                </ul>
+                <p>
+                    I also worked with stakeholders to map our primary user personas, highlighting the importance of convenience, free delivery and eco-friendly sourcing. This led to three principles: show value, reduce effort and build trust.
+                </p>
+            </section>
+
+            <section class="case-study-section">
+                <h2 class="section-title">Ideation & Strategy</h2>
+
+                <div class="image-wrapper image-container-row">
+                    <div class="image-box fade-in-up">
+                        <img src="images/onboarding/image-01.jpg" alt="" class="inner-image" />
+                        <p class="caption">Wireframe</p>
+                    </div>
+
+                    <div class="image-box fade-in-up">
+                        <img src="images/onboarding/image-02.jpg" alt="" class="inner-image" />
+                        <p class="caption">User flow</p>
+                    </div>
+                </div>
+
+                <p>
+                    I redesigned the journey around a browse-first experience. The new onboarding carousel introduced
+                    the service through feature-led slides, using the space to communicate key benefits. The postcode
+                    lookup was built into the carousel, allowing users to check availability without creating an
+                    account.
+                </p>
+                <div class="image-wrapper image-box">
+                    <img src="images/onboarding/image-03.jpg" alt="" class="inner-image fade-in-up" />
+                    <p class="caption">Onboarding left, Login right</p>
+                </div>
+                <p>
+                    Users could then browse the store, categories and product detail pages without registering.
+                    Registration was introduced when users showed purchase intent. For example, a user could explore a
+                    product and its pricing, but selecting the purchase action would prompt them to complete
+                    registration.
+                </p>
+                <p>Onboarding → Postcode → Browse → Product → Purchase intent → Registration → Purchase</p>
+
+                 <p>
+                  If the service is active in their area, users see a confirmation page featuring a local milkman profile to build trust and familiarity. This page also displays delivery schedules alongside calls to action to browse the shop or complete sign-up. If the service is not yet active, users can join a waitlist instead.
+                </p>
+
+
+                <div class="image-wrapper image-container-row">
+                    <div class="image-box fade-in-up">
+                        <img src="images/onboarding/image-04.jpg" alt="" class="inner-image" />
+                        <p class="caption">Not active, sign-up to our waiting list</p>
+                    </div>
+
+                    <div class="image-box fade-in-up">
+                        <img src="images/onboarding/image-05.jpg" alt="" class="inner-image" />
+                        <p class="caption">Active in your area</p>
+                    </div>
+                </div>
+                                <p>
+                  I also split registration into shorter steps and communicated the requirements more clearly.
+                 <p>
+            </section>
+
+            <div class="image-box">
+                <img src="images/onboarding/image-07.jpg" alt="" class="fade-in-up" />
+                <p class="caption">Account creation</p>
             </div>
-        </section>
 
-        <section class="case-study-section">
+            <section class="case-study-section">
+                <h2 class="section-title">Design & Testing</h2>
+                <p>
+                    I built the final UI using the existing design system and created a clickable prototype covering the
+                    onboarding, browsing and registration journey.
+                </p>
 
-<div class="project-specst">
-    <div>
-        <span>Role</span> 
-        <p>Product Design</p>
-    </div>
-    <div>
-        <span>Tools</span>
-        <p>Figma, Hotjar, Google Analytics, Lyssna</p>
-    </div>
-    <div>
-        <span>Timeframe</span>
-        <p>6 weeks</p>
-    </div>
-</div>	
-            <h2 class="section-title">My Role</h2>
-            <ul class="role-list">
-                <li>Designed and iterated on sketches, wireframes, and UI concepts</li>
-                <li>Creating of a new atomic design system</li>
-                <li>Presented design work and rationale to the client team</li>
-                <li>User testing on prototype the design</li>
-            </ul>
-        </section>
+                <p>
+                    I tested the prototype with 8 participants via Lyssna as qualitative usability testing, focusing on
+                    whether users understood the service, could navigate the new journey and knew what was required at
+                    key points. It highlighted two issues:
+                </p>
+                <p>
+                    Delivery schedules — users weren't clear which days their local milk delivery person operated. I
+                    made the schedule explicit.
+                </p>
+                <p>
+                    Password requirements — an animation intended to explain the requirements caused confusion. I
+                    replaced it with simpler, clearer feedback.
+                </p>
+                <div class="image-wrapper image-box">
+                    <img src="images/onboarding/image-08.jpg" alt="" class="inner-image fade-in-up" />
+                    <p class="caption">Clearer feedback</p>
+                </div>
+            </section>
 
-        <section class="case-study-section">
-            <h2 class="section-title">The Problem</h2>
-            <p>
-             The primary obstacle to user retention was a mandatory login wall that blocked access to the app's core value. Users were forced to complete a lengthy, multi-step sign-up process before they could even browse the product catalog, check delivery availability in their area, or view pricing. This created significant friction, as potential customers were being asked to commit their personal data before understanding if the service met their specific needs or if delivery was even possible for their postcode.
-            </p>
-            <p>
-            Having already established the app’s design system and redesigned several core pages, the goal for this specific phase was to overhaul the onboarding experience to better align with user expectations and modern retail standards.
-            </p>
-	   </section>
+            <section class="case-study-section">
+                <h2 class="section-title">Outcome</h2>
+                <p>
+                    The redesigned experience resulted in a 14% reduction in sign-up abandonment. More importantly,
+                    registration moved from being a barrier at the start of the experience to a natural step within the
+                    purchase journey.
+                </p>
+                <img src="images/onboarding/image-06.jpg" alt="" class="inner-image fade-in-up" />
+            </section>
 
-        <section class="case-study-section">
-            <h2 class="section-title">Research & Insights</h2>
-            <p>
-              The research phase involved a deep dive into existing user personas, which highlighted a recurring confusion regarding the service's two distinct ordering methods. It became clear that the target audience—largely busy professionals and families—found the existing "Add to Basket" process far too slow. Furthermore, an over-reliance on explanatory text led to significant information overload. By auditing the current sign-up flow, I was able to map out every point of friction and redraw a corrected user flow that prioritized immediate value over data collection.
-            </p>
+            <section class="case-study-section">
+                <h2 class="section-title">What I Learnt</h2>
+                <p>
+                    Users are more willing to commit when they've already experienced some value. This project showed me
+                    that when you ask users to register can be just as important as how you design the registration flow.
+                </p>
+            </section>
 
-        </section>
-        
-         <section class="case-study-section">
-        <img src="images/onboarding/image-01.jpg" alt="" class="inner-image fade-in-up">
-		</section>
-        <section class="case-study-section">
-         
-            <h2 class="section-title">Ideation & Strategy</h2>
-            <p>
-               The strategy moved away from a gated experience toward a "browse-first" philosophy. Through a series of brainstorming sessions and workshops, I developed a hypothesis that allowing users to explore the shop and verify delivery availability upfront would significantly increase downstream conversion. I designed a series of wireframes to visualize this new path, which I then turned into a functional prototype. This allowed us to test a flow where the sign-up process was deferred until the point of checkout, making the initial entry into the app feel seamless and welcoming.
-            </p>
-        </section>
-        
-         <img src="images/onboarding/image-02.jpg" alt="" class="fade-in-up">
-         
-         <section class="case-study-section">
-         <img src="images/onboarding/image-03.jpg" alt="" class="inner-image fade-in-up">
-		</section>
-		
-        <section class="case-study-section">
-            
-            <h2 class="section-title">Design & Testing</h2>
-            <p>
-               During the design phase, I maintained rigorous documentation and integrated cross-team feedback to refine the UI components efficiently. I focused on reducing cognitive load by replacing dense text with intuitive iconography and native mobile patterns. By keeping the design system updated in real-time, I ensured that every iteration of the onboarding screens remained consistent with the rest of the app, allowing for a smooth handoff to the development team and a cohesive experience for the user.
-            </p>
-              <p>
-              To validate the new approach, we conducted a series of usability tests, including five-second tests and first-click analysis, to ensure the new "Guest Browse" feature was intuitive. The testing phase was instrumental in fine-tuning the balance between providing enough information to be helpful and keeping the interface clean. We learned that by surfacing delivery day information early in the guest journey, users felt more confident in the service, which directly addressed the frustrations identified during the initial research phase.
-			  </p>
-			<div class="image-container-row">
-				<img src="images/onboarding/Image-04.jpg" alt="" class="inner-image fade-in-up">
-				<img src="images/onboarding/Image-05.jpg" alt="" class="inner-image fade-in-up">
-			</div>
-        </section>
-        
-        <img src="images/onboarding/image-06.jpg" alt="" class="fade-in-up">
+            <section class="more-work">
+                <div class="more-work-grid">
+                    <a href="gameshub.html" class="more-work-item">
+                        <div class="img-wrapper">
+                            <img src="images/thumbnails/gameshub.jpg" alt="" class="more-work-img" />
+                        </div>
+                        <span class="more-work-label">Games Demos to Drive Revenue</span>
+                    </a>
+                    <a href="luckyblock.html" class="more-work-item">
+                        <div class="img-wrapper">
+                            <img src="images/thumbnails/luckyblock.jpg" alt="" class="more-work-img" />
+                        </div>
+                        <span class="more-work-label">Streamlining Casino Sign-up</span>
+                    </a>
+                    <a href="myorders.html" class="more-work-item">
+                        <div class="img-wrapper">
+                            <img src="images/thumbnails/purchase.jpg" alt="" class="more-work-img" />
+                        </div>
+                        <span class="more-work-label">Frictionless Grocery Onboarding</span>
+                    </a>
+                </div>
+            </section>
+        </main>
 
-        <section class="case-study-section">
-            <h2 class="section-title">Outcome</h2>
-            <p>
-            Following the launch of the redesigned onboarding and ordering flow, the app’s rating on Google Play improved from 4.1 to 4.3 stars across nearly 6,000 reviews. The customer support team reported a noticeable decrease in user queries and errors related to the ordering process. This project served as a powerful reminder of how removing unnecessary barriers and listening to user frustrations can directly translate into a more successful product and a more loyal customer base.
-            </p>
-        </section>
-
-        <section class="case-study-section">
-            <h2 class="section-title">What I Learnt</h2>
-            <p>
-                The project was a strong reminder of how listening to user frustrations directly translates into better experiences.
-            </p>
-        </section>
-
-		<section class="more-work">
-            <div class="more-work-grid">
-                <a href="gameshub.html" class="more-work-item">
-                    <div class="img-wrapper"><img src="images/thumbnails/gameshub.jpg" alt="" class="more-work-img"></div>
-                    <span class="more-work-label">Casino Game Demo</span>
-                </a>
-                <a href="luckyblock.html" class="more-work-item">
-                    <div class="img-wrapper"><img src="images/thumbnails/luckyblock.jpg" alt="" class="more-work-img"></div>
-                    <span class="more-work-label">Casino Sign-up flow</span>
-                </a>
-                <a href="mikeandmore.html" class="more-work-item">
-                    <div class="img-wrapper"><img src="images/thumbnails/purchase.jpg" alt="" class="more-work-img"></div>
-                    <span class="more-work-label">Grocery App Order flow</span>
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-    <script src="script.js"></script>
-    
-</body>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>

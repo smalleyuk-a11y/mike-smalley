@@ -13,7 +13,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: Casino Sign-up Flow</title>
+    <title>LuckyBlock: Casino Sign-up Flow</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +51,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/assets/favicon/apple-touch-icon.png" />
 <link rel="manifest" href="images/assets/site.webmanifest" />
 </head>
-<body>
+<body class="casestudy">
 	<div class="site-bg-fixed"></div>
 	<div class="site-bg-scrolling"></div>
     <header class="case-study-header-nav">
@@ -66,10 +66,10 @@
     <main class="case-study-content">
         
         <section class="project-details-intro">
-            <span class="project-meta-top"><span>Brand:</span> LuckyBlock</span>
+            <span class="project-meta-top"><span>LuckyBlock Casino</span> </span>
             <h1 class="case-study-title">Casino Sign-Up</h1>
             <p class="case-study-summary">
-            Redesigning the LuckyBlock sign-up flow to eliminate friction points, streamline player onboarding, and optimize welcome offer conversion.
+            Redesigning the LuckyBlock sign-up flow to eliminate friction points, streamline player onboarding, and optimise welcome offer conversion.
             </p>
 
 			
@@ -98,94 +98,168 @@
     </div>
 </div>	
             <h2 class="section-title">My Role</h2>
+            <p>I owned the UX and UI design for the revised sign-up experience, working with the existing design system and collaborating with product and development to account for technical constraints.</p>
             <ul class="role-list">
-                <li>Conducted competitive benchmarking and user data analysis to identify sign-up friction points</li>
-                <li>Mapped out user flows and detailed wireframes to optimise step-by-step conversion</li>
-                <li>Designed user interfaces applying design system standards for brand consistency and accessibility</li>
-                <li>Ran usability testing on prototypes via Lyssna to validate user comprehension and refine features</li>
-                <li>Iterated on post-test feedback by designing a deposit popup to boost offer clarity and player conversion</li>
-            </ul>
+
+  <li>Analysed user data and competitor experiences to identify friction points and opportunities to improve registration conversion.</li>
+  <li>Mapped user flows and developed wireframes to explore alternative onboarding approaches.</li>
+  <li>Designed the revised sign-up experience using the existing design system and accessibility standards.</li>
+  <li>Conducted usability testing with eight participants via Lyssna to identify friction and validate user understanding.</li>
+  <li>Iterated on the experience based on testing insights, including introducing a post-sign-up deposit prompt.</li>
+  <li>Validated the final design through A/B testing, resulting in an 11% increase in conversion.</li>
+</ul>
         </section>
 
         <section class="case-study-section">
             <h2 class="section-title">The Problem</h2>
             <p>
-            High drop-off rates during the LuckyBlock sign-up flow were preventing potential players from reaching the lobby, impacting user acquisition. My goal was to identify the key points of friction in the onboarding experience, redesign the flow to improve completion rates, and better highlight our welcome offer to drive conversion.
+           High drop-off during LuckyBlock's sign-up process was preventing potential players from reaching the lobby and becoming active users. The existing flow asked users to complete four fields upfront, including creating a username, while unclear password requirements added further friction. My goal was to identify where users were struggling, simplify the registration experience where possible, and make the welcome offer clearer without compromising the requirements of the existing system.
             </p>
 	   </section>
 
         <section class="case-study-section">
             <h2 class="section-title">Research & Insights</h2>
-            <p>
-            Analysing data from our existing flow showed that drop-off was mainly driven by username creation and confusing password validation requirements. Asking users to fill out four fields upfront created an immediate barrier.
-            </p>
-            <p>
-            I benchmarked competitor platforms and found they offered frictionless entry via SSO, required fewer initial fields, and kept user bonuses visible from step one. While some platforms avoided mandatory usernames altogether, which was not an option for our system, I focused on optimising the surrounding experience to minimise friction wherever possible.
-            </p>
-			<div class="image-container-row fade-in-up">
-				<img src="images/luckyblock/image-01.jpg" alt="" class="inner-image">
-				<img src="images/luckyblock/image-02.jpg" alt="" class="inner-image">
+			<div class="image-wrapper image-container-row">
+				<div class="image-box fade-in-up">
+					<img src="images/luckyblock/image-01.jpg" alt="" class="inner-image">
+					<p class="caption">Old Design</p>
+				</div>
+				
+				<div class="image-box fade-in-up">
+					<img src="images/luckyblock/image-02.jpg" alt="" class="inner-image">
+					<p class="caption">User flow</p>
+				</div>
 			</div> 
+            <p>
+           I started by analysing data from the existing sign-up flow to understand where users were dropping out. The biggest friction points were:
+            </p>
+            <ul class="role-list">
+            <li>Username creation</li>
+            <li>Confusing password validation requirements</li>
+            <li>The number of fields presented upfront</li>
+            </ul>
+            <p>
+ I then benchmarked competitor platforms to understand how they approached registration. Several reduced friction by offering SSO, requiring fewer initial fields, and making promotional offers visible from the beginning of the journey. Some competitors avoided mandatory usernames altogether. This wasn't possible for LuckyBlock because a username was a backend requirement. This became an important constraint for the design:
+            </p>
+            <p>
+If I couldn't remove the requirement, I needed to remove as much of the friction around it as possible.
+            </p>
         </section>
 
         <section class="case-study-section">
             <h2 class="section-title">Ideation & Strategy</h2>
-            <p>
-            Once the issues were understood, I created a user flow to map out the iterations, aiming to solve the problems we discovered. This included introducing SSO so users can bypass most requirements, as well as adding auto username suggestions to let them quickly bypass that step, too. I choose to integrate Google and MetaMask SSO directly into step one of the flow due to their popularity in the sector.
-            </p>
-            <p>
-            The flow was then mapped out in more detail using wireframes, finding the best way to showcase the offer, making sure field requirements were permanently visible and error messaging was helpful. I also collapsed the Referral Code field since it was rarely used, further reducing cognitive load. The login flow also needed fixing due to the new sign methods and visual presentation. The wireframe showed it made sense to move the username creation, referral, checkboxes to page two to reduce cognitive overload on the first page.
-            </p>
-			<div class="image-container-row fade-in-up">
-				<img src="images/luckyblock/image-03.jpg" alt="" class="inner-image">
-				<img src="images/luckyblock/image-04.jpg" alt="" class="inner-image">
+
+			<div class="image-wrapper image-container-row inner-image">
+				<div class="image-box fade-in-up">
+					<img src="images/luckyblock/image-03.jpg" alt="" class="inner-image">
+					<p class="caption">Early draft</p>
+				</div>
+				
+				<div class="image-box fade-in-up">
+					<img src="images/luckyblock/image-04.jpg" alt="" class="inner-image">
+					<p class="caption">Initial wireframe</p>
+				</div>
 			</div> 
+			
+            <p>
+           I mapped the existing and proposed user flows to find ways to make registration quicker and easier. I introduced Google and MetaMask sign-in at the start, allowing users to bypass most of the manual registration.
+            </p>
+            <p>
+          For traditional registration, I explored auto-generated username suggestions to reduce friction around the mandatory username requirement.
+            </p>
+			<div class="image-wrapper image-container-row inner-image">
+				<div class="image-box fade-in-up">
+					<img src="images/luckyblock/image-05.jpg" alt="" class="inner-image">
+					<p class="caption">Sign-up 1 - SSO and email</p>
+				</div>
+				
+				<div class="image-box fade-in-up">
+					<img src="images/luckyblock/image-06.jpg" alt="" class="inner-image">
+					<p class="caption">Sign-up 2 - Profile setup with auto-generated username </p>
+				</div>
+			</div> 
+            <p>
+            I then used wireframes to work through the structure before moving into visual design. I moved the username, referral code and additional checkboxes to the second step, keeping the first screen focused on the main action. Password requirements stayed visible, while error messaging was made clearer. The new sign-in methods also meant reworking the login flow so both experiences remained consistent.
+            </p>
+
         </section>
 
-		<img src="images/luckyblock/image-05.jpg" alt="" class="fade-in-up">
+
+			
+		<img src="images/luckyblock/image-07.jpg" alt="" class="image-wrapper fade-in-up">
+		
+
+			
+
+			
 			
         <section class="case-study-section">
             <h2 class="section-title">Design & Testing</h2>
-            <p>
-            I created the UI by applying the design system to ensure brand consistency and accessibility compliance. I tested the prototype on 8 participants via Lyssna to evaluate flow comprehension and friction. This highlighted an issue where some users were unsure if the offer was active or missed due to not using the referral code, which wasn't required for the offer. To solve this, I added an end-of-flow deposit pop-up so users can grab their reward, which has the added bonus of converting users to active players.
-            </p>
-            <p>
-            Another user commented it was odd that the username can only be autogenerated and not written. This will be solved in the live version since the text will be immediately selected, showing it's editable.
-            </p>			
-			<div class="image-container-row fade-in-up">
-				<img src="images/luckyblock/image-06.jpg" alt="" class="inner-image">
-				<img src="images/luckyblock/image-07.jpg" alt="" class="inner-image">
-			</div> 	
-        </section>
-		
-	<img src="images/luckyblock/image-08.jpg" alt="" class="fade-in-up">
+            
+			<div class="image-wrapper image-container-row inner-image">
+				<div class="image-box fade-in-up">
+					<img src="images/luckyblock/image-08.jpg" alt="" class="inner-image">
+					<p class="caption">Username suggestion to solve a major pain point</p>
+				</div>
+				
+				<div class="image-box fade-in-up">
+					<img src="images/luckyblock/image-09.jpg" alt="" class="inner-image">
+					<p class="caption">Clear error messaging</p>
+				</div>
+			</div> 
 			
+            <p>
+            I created the UI by applying the design system to ensure brand consistency and accessibility compliance. I tested the prototype on 8 participants via Lyssna to evaluate flow comprehension and friction. This highlighted an issue where some users were unsure if the offer was active or missed due to not using the referral code, which wasn't required for the offer. To solve this, I added an end-of-flow deposit pop-up so users could grab their reward, which had the added bonus of converting users to active players. 
+            </p>
+         <div class="image-wrapper image-box">
+         <img src="images/luckyblock/image-10.jpg" alt="" class="inner-image fade-in-up">
+         
+         <p class="caption">New screen added to encourage deposit after sign-up</p> 
+         </div>
+            <p>
+           Another user commented it was odd that the username could only be autogenerated and not written. This will be solved in the live version since the text will be immediately selected, showing it's editable.
+            </p>	
+        </section>
+         
+
+         
+           <img src="images/luckyblock/image-11.jpg" alt="" class="image-wrapper fade-in-up">
+               
+          
+            		
+			
+			<div class="image-container-row inner-image">
+				<div class="image-box fade-in-up">
+					<img src="images/luckyblock/image-12.jpg" alt="" class="inner-image">
+					<p class="caption">Login updated with SSO</p>
+				</div>
+				
+				<div class="image-box fade-in-up">
+					<img src="images/luckyblock/image-13.jpg" alt="" class="inner-image">
+					<p class="caption">Forgot your password</p>
+				</div>
+			</div> 		
+
+	
+		
 
         <section class="case-study-section"> 
             <h2 class="section-title">Outcome</h2>
             <p>
-            The A/B test was a success, delivering an 11% boost in conversion and streamlining the onboarding flow. We planned a follow-up test comparing a single-column layout against our two-step process to optimize further, but deprioritized it to focus on higher-priority product features.
+           The revised sign-up experience was A/B tested against the existing flow and resulted in an 11% increase in conversion. The redesign reduced friction in the registration process while maintaining the backend requirement for usernames and making the welcome offer clearer.
             </p>
             
         </section>
 		
 		
-			
-			
-<img src="images/luckyblock/image-09.jpg" alt="" class="inner-image fade-in-up">
-        <section class="case-study-section">
-        
-        
-			<div class="image-container-row content-width">
-				<img src="images/luckyblock/image-10.jpg" alt="" class="inner-image fade-in-up">
-				<img src="images/luckyblock/image-11.jpg" alt="" class="inner-image fade-in-up">
-			</div>	
-			</section>
+		<img src="images/luckyblock/image-14.jpg" alt="" class="fade-in-up">	
+		<p class="caption">Reset password flow updated to new UI</p> 
+
 			
         <section class="case-study-section">
             <h2 class="section-title">What I Learnt</h2>
             <p>
-            Mandatory usernames were a non-negotiable backend requirement, but they didn't have to be a barrier. When you can’t eliminate a required step, you can still eliminate the friction around it in this case, using auto-suggestions to make it effortless.
+         This project taught me that a technical limitation doesn't necessarily mean a bad user experience. The username couldn't be removed, but I could make it feel effortless. I also learned that testing can uncover problems I wasn't originally looking for, which helped me improve the wider journey.
             </p>
         </section>
 
@@ -194,15 +268,15 @@
             <div class="more-work-grid">
                 <a href="gameshub.html" class="more-work-item">
                     <div class="img-wrapper"><img src="images/thumbnails/gameshub.jpg" alt="" class="more-work-img"></div>
-                    <span class="more-work-label">Casino Game Demo</span>
+                    <span class="more-work-label">Games Demos to Drive Revenue</span>
                 </a>
                 <a href="onboarding.html" class="more-work-item">
                     <div class="img-wrapper"><img src="images/thumbnails/onboarding.jpg" alt="" class="more-work-img"></div>
-                    <span class="more-work-label">Grocery App Onboarding</span>
+                    <span class="more-work-label">Frictionless Grocery Onboarding</span>
                 </a>
-                <a href="mikeandmore.html" class="more-work-item">
+                <a href="myorders.html" class="more-work-item">
                     <div class="img-wrapper"><img src="images/thumbnails/purchase.jpg" alt="" class="more-work-img"></div>
-                    <span class="more-work-label">Grocery App Order flow</span>
+                    <span class="more-work-label">Clarity for App Grocery Orders</span>
                 </a>
             </div>
         </section>
