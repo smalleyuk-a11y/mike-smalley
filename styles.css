@@ -523,7 +523,12 @@ width:100%;
 
 }
 
-.project-meta-top span {opacity:0.6;}
+.project-meta-top span {opacity:0.6;
+font-weight: 500;
+color: #fff;
+opacity: 1;
+letter-spacing: 1px;
+}
 
 .case-study-title {
   
@@ -638,8 +643,8 @@ Color:#f2f4ff;
 .role-list li {
     padding-left: 1.5em; 
     position: relative;
-    line-height: 1.8; /* Retain specific line height for list items */
-    margin-bottom: 0px;
+    line-height: 1.6; /* Retain specific line height for list items */
+    margin-bottom: 4px;margin-bottom: 4px;
 }
 
 .role-list li::before {
@@ -1186,9 +1191,9 @@ Opacity:0.4;
 .project-specst span {
     display: block;
     font-size: 0.75rem;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 2px;
     opacity: 0.6;
     margin-bottom: 4px;
 }
@@ -1268,3 +1273,40 @@ padding: 12px 12px;
   transform: scale(1.02);
 }
 
+
+.team-role {max-width:300px;}
+
+
+.viewlive {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+color: #ffffff;
+font-size: 14px;
+font-weight: 500;
+text-decoration: none;
+text-transform: uppercase;
+background: #292e4d;
+letter-spacing: 1px;
+padding: 4px 16px;
+height: 32px;
+border-radius: 10px;
+
+}
+
+
+/* SVG Icon Styling */
+.viewlive .icon-external {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+
+@media (max-width: 768px) {
+.viewlive {
+
+  font-size: 12px;
+height:24px;
+
+}
+}

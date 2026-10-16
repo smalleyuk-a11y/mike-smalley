@@ -68,38 +68,38 @@
             <span class="project-meta-top"><span>Milk&amp;More</span> </span>
             <h1 class="case-study-title">Clarity for App Grocery Orders</h1>
             <p class="case-study-summary">
-                Milk & More is a leading UK grocery box delivery service. This project was part of a larger redesign of their mobile app. Having already built the app’s design system, my focus for this phase was to improve the order flow — reducing friction and making it clearer for users to place either repeat or one-off orders.
+               Milk & More is a popular UK grocery delivery service built around convenience and fresh produce. Friendly neighbourhood milkmen deliver customers’ orders, either as one-offs or as subscriptions.
             </p>
-
-		
-			
-
         </section>
 
 <section class="case-study-image-section">
             <div class="case-study-image-wrapper"> 
-                <img src="images/orders/hero.jpg" alt="Milk&More Order Flow Mobile App Screens" class="case-study-main-image">
+                <img src="images/add-basket/hero.jpg" alt="Milk&More Order Flow Mobile App Screens" class="case-study-main-image">
             </div>
         </section>
 
         <section class="case-study-section">
 <div class="project-specst">
-    <div>
-        <span>Role</span> 
-        <p>Product Design</p>
+    <div class="team-role">
+        <span>Team</span> 
+        <p>Product Design (me), Product Manager, Engineer</p>
     </div>
     <div>
         <span>Tools</span>
-        <p>Figma, UXCam, Mixpanel, Lyssna</p>
+        <p>Figma, Mixpanel, Lyssna</p>
     </div>
     <div>
         <span>Timeframe</span>
-        <p>3 months</p>
+        <p>7 Weeks</p>
     </div>
-                  <div>
-                        <span>View live</span>
-                         <a target="_blank" href="https://play.google.com/store/apps/details?id=com.muller.milkandmoreapp&hl=en_GB">Play Store</a>
-                    </div>
+    <div>
+                      <span>View live</span>
+                         <a class="viewlive" target="_blank" href="https://play.google.com/store/apps/details?id=com.muller.milkandmoreapp&hl=en_GB">Play Store <svg class="icon-external" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true">
+    <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zm-9 2h6v2H5v12h12v-6h2v8H3V5h2z"/>
+  </svg></a>
+                  </div>
+
+                
 </div>	
             <!---  <h2 class="section-title">My Role</h2>
             <p>I was the sole UI/UX designer on the project, working with the Product Manager and developers from research through to handoff.</p>
@@ -115,17 +115,13 @@
         <section class="case-study-section">
             <h2 class="section-title">The Problem</h2>
             <p>
-Subscriptions were intended to make repeat grocery shopping easier, but the ordering experience was creating confusion. Users were mixing up One-off and Subscription orders, which could lead to unexpected charges, missed deliveries and avoidable support requests.
+Users were placing orders in the wrong format, one-off instead of repeating or the other way round. The Add to Basket modal used a select box that defaulted to one-off, which hid the other options.
 </p>
-<p>
-There was also very little flexibility once an order had been created. If someone wanted to change or pause a subscription, their main options were to cancel it or contact support.
-
-            </p>
 	   </section>
 
         <section class="case-study-section">
-            <h2 class="section-title">Research & Insights</h2>
-		
+            <h2 class="section-title">Research &amp; Insights</h2>
+		<!----
 			<div class="image-wrapper image-container-row inner-image fade-in-up">
 				<div class="image-box fade-in-up">
 					<img src="images/orders/Image-01.jpg" alt="" class="case-image inner-image">
@@ -137,102 +133,116 @@ There was also very little flexibility once an order had been created. If someon
 					<p class="caption">User flow</p>
 				</div>
 			</div>
-            <p>
-I started by auditing other UK grocery apps to see how they handled basket setup, delivery dates and subscription schedules. I then looked at Mixpanel data and support logs to understand where users were struggling. There was a noticeable drop-off during the ordering process, alongside a high number of support requests relating to ordering mistakes.
-            </p>
-            <p>
-UXCam session recordings helped explain what was happening. Users were frequently selecting the wrong option inside the Add to Basket modal, while others abandoned the process altogether. The labels weren't clear, the hierarchy made the options difficult to distinguish, and important information about delivery frequency was easy to miss. This gave us a clearer picture of the problem: users weren't necessarily struggling with subscriptions themselves — the interface wasn't giving them enough clarity or control.
+---->
+
+
+<ul class="role-list">
+	<li><strong>19% of order-related support tickets</strong> were about unintended orders in the wrong format. Staff were manually switching orders for customers. I scoped that out of this release to keep it focused, and picked it up in the next project, the My Orders flow.</li>
+	<li><strong>App Store reviews</strong> raised the same issue</li>
+	<li><strong>Mixpanel recordings</strong> showed hesitation and back-and-forth in the ordering flow and large delays on selecting a date</li>
+	<li><strong>Mixpanel data</strong> showed a noticeable drop-off during the ordering process</li>
+</ul>     
+
+
+               <p>
+I also reviewed the personas and audited other UK grocery apps to see how they handled basket setup, delivery dates and repeat schedules.      
             </p>
 
         </section>
 
         <section class="case-study-section">
-            <h2 class="section-title">Ideation & Strategy</h2>
+            <h2 class="section-title">Ideation &amp; Strategy</h2>
             
             <p>
-    I mapped the existing ordering journey and identified where we could give users more control without making the experience more complicated. The new flow allowed users to:
+    The goal was to make the choice between one-off and repeating orders clear, without making the flow more complicated. I agreed with the engineer that the toggle and date button could be built from existing components, and with the PM to prioritise ordering mistakes ahead of the My Orders flow.
             </p>
-               <ul class="role-list">
-            	<li>Choose between One-off and Subscription orders more clearly</li>
-            	<li>Edit an existing order</li>
-            	<li>Switch between One-off and Subscription</li>
-            	<li>Pause upcoming deliveries when they were away</li>
-            </ul>         
  	
+		<div class="image-wrapper image-box">
+            <img src="images/add-basket/original-01.jpg" alt="" class="inner-image  fade-in-up">       
+			<p class="caption">Before: Hidden options and unfamiliar UI.</p>
+         </div> 
+         		
+
+
+
 			
+<p>
+<strong>1. A visible toggle replaces the select box.</strong><br>
+The old default hid the repeat option, so users never saw it. Both choices are now visible up front.
+</p>
+<p>
+<strong>2. The date field shows when an order repeats.</strong><br>
+A standard date picker gave no hint that orders could recur. The new date selection makes the delivery pattern clear and should speed up date selection by using a familiar format.
+</p>
 	<div class="image-wrapper image-container-row inner-image">
 				<div class="image-box fade-in-up">
-					<img src="images/orders/Image-03.jpg" alt="" class="case-image inner-image">
-					<p class="caption">Original version</p>
+					<img src="images/add-basket/after-v01.jpg" alt="" class="case-image inner-image">
+					<p class="caption">New: One-off order</p>
 				</div>
 				
 				<div class="image-box fade-in-up">
-					<img src="images/orders/Image-04.jpg" alt="" class="case-image inner-image">
-					<p class="caption">New version</p>
+					<img src="images/add-basket/after-v02.jpg" alt="" class="case-image inner-image">
+					<p class="caption">New: Repeated order</p>
 				</div>
 			</div> 
-                       
-<p>For the Add to Basket modal, I replaced hidden dropdowns with clearer controls and introduced a calendar so users could see and select delivery dates more easily.
-            </p>
-
-
-	<div class="image-wrapper image-box">
-            <img src="images/orders/Image-08.jpg" alt="" class="inner-image  fade-in-up">       
-			<p class="caption">Basket revised with clear distinct</p>
-         </div> 
-			
-            <p>
-I also separated One-off and Subscription items throughout the experience. In the basket and My Orders screens, the two types were grouped separately with clear headings, prices and delivery frequencies. The aim wasn't to add more functionality for its own sake. It was to make the existing choices easier to understand while giving users more control over their orders.
+<p>
+<strong>Note:</strong>
+Since this is a milk delivery service, items are only delivered on specific days, Mon, Wed and Thursday in this example. This is explained to users on unrelated screens.
 </p>
-		<div class="image-wrapper image-box">
-            <img src="images/orders/Image-09.jpg" alt="" class="case-image fade-in-up">     
-			<p class="caption">View and edit my orders</p>
-         </div>
-			<div class="image-wrapper image-container-row inner-image fade-in-up">
+
+
+<p>
+<strong>3. The basket groups one-off and repeating items.</strong><br>
+Headings, icons and helper text let users understand what they’re getting at a glance.
+</p>		
+	<div class="image-wrapper image-container-row inner-image">
 				<div class="image-box fade-in-up">
-					<img src="images/orders/Image-10.jpg" alt="" class="case-image inner-image">
-					<p class="caption">Convert to an one-off order</p>
+					<img src="images/add-basket/Basket-before.jpg" alt="" class="case-image inner-image">
+					<p class="caption">New: One-off order</p>
 				</div>
 				
 				<div class="image-box fade-in-up">
-					<img src="images/orders/Image-11.jpg" alt="" class="case-image inner-image">
-					<p class="caption">Convert to an repeating order</p>
+					<img src="images/add-basket/Basket-after.jpg" alt="" class="case-image inner-image">
+					<p class="caption">New: Repeated order</p>
 				</div>
 			</div> 
 
         </section>
         
-		<div class="image-wrapper image-box">
-            <img src="images/orders/Image-12.jpg" alt="" class="case-image fade-in-up">     
-			<p class="caption">Newly added Pause your orders flow</p>
-         </div>
+	
         
 
         <section class="case-study-section">
-            <h2 class="section-title">Design & Testing</h2>
-			
-	<div class="image-wrapper image-container-row inner-image">
-				<div class="image-box fade-in-up">
-					<img src="images/orders/Image-06.jpg" alt="" class="case-image inner-image">
-					<p class="caption">Add to basket</p>
-				</div>
-				
-				<div class="image-box fade-in-up">
-					<img src="images/orders/Image-07.jpg" alt="" class="case-image inner-image">
-					<p class="caption">Add to basket add a repeating order</p>
-				</div>
-			</div> 
-         
+            <h2 class="section-title">Design &amp; Testing</h2>        
             <p>
-I built the final UI using the existing design system, keeping the experience consistent with the rest of the app. I then created a prototype and tested the flow with eight participants through Lyssna. The testing was qualitative, helping me identify points of confusion rather than statistically validating the design.
+I built the final UI using the existing design system, then tested a prototype through Lyssna with eight participants per test. The testing was qualitative, helping me find points of confusion rather than statistically validating the design.
             </p>
-            <p>
-One issue that came up was the term "bi-weekly", which participants interpreted differently. I changed this to "Every 2 weeks" and made the delivery pattern more visible by highlighting repeating dates on the calendar.
-</p>
-<p>
-I also added explicit messaging showing when an order would start and when future deliveries would repeat. These changes addressed the main points of confusion identified during testing and made the subscription schedule easier to understand.
 
-            </p>
+<h3>Add to basket, round 1: calendar picker</h3>
+<p>
+Task: set up an order repeating every other week on Friday. All testers understood the order type, but 2 of 8 skipped the final step of selecting a date on the calendar. 
+</p>
+
+
+<h3>Add to basket, round 2: making date clear</h3>
+		<div class="image-wrapper image-box">
+            <img src="images/add-basket/after-v2.jpg" alt="" class="inner-image  fade-in-up">       
+			<p class="caption">Final version</p>
+         </div> 
+         <p>
+I replaced the calendar with a button stating in clear English “Starting on: Tues 13th October”, this button opens a calendar in a separate modal.
+
+
+Testers moved through the flow smoothly and understood their order.
+</p>
+
+
+
+<h3>Basket: first-click test</h3>
+<p>
+Task: remove the repeating order items. 8 of 8 testers succeeded.
+</p>
+
 	
         </section>
         
@@ -241,24 +251,33 @@ I also added explicit messaging showing when an order would start and when futur
         <section class="case-study-section">
 
             <h2 class="section-title">Outcome</h2>
-
+		<p>I handed over the final designs to the engineer using documentation, design system updates and a prototype.</p>
             <ul class="role-list">
             	<li>Subscription-related support tickets decreased by 23%</li>
-            	<li>Cart abandonment decreased by 8%</li>
+            	<li>Cart abandonment fell from 77% to 69%, an 8 percentage point reduction, measured in Mixpanel over 3 months after release.</li>
+            	<li>8 of 8 testers removed repeating items from the basket on the first click</li>
             </ul>
             <p>
 
-Giving users more control over their subscriptions reduced the need to contact support for straightforward changes, such as pausing a subscription or editing an order. The results suggested that clearer ordering journeys and greater control over subscriptions helped improve the overall customer experience.
+The results suggest that a clearer choice between one-off and repeating orders reduced ordering mistakes and helped more users complete their orders.
 
 
             </p>
+            <p>
+I applied this in my next project, a new flow for browsing and editing orders (preview below).
+            </p>
+		<div class="image-wrapper image-box">
+            <img src="images/add-basket/bonus-01.jpg" alt="" class="inner-image  fade-in-up">       
+			<p class="caption">New flow for my order</p>
+         </div> 
+            
         </section>
 		
 
         <section class="case-study-section">
             <h2 class="section-title">What I Learnt</h2>
             <p>
-               This project reinforced how much impact small UX decisions can have. Something as simple as unclear terminology or hiding an important choice behind a dropdown can lead to real problems for users.
+               Small UX decisions can have a big impact. Hiding an important choice in a dropdown or using unclear terminology led to real problems for users, and my first fix wasn’t enough: testing showed the calendar’s start date still caused mis-clicks until I changed it to a button.
             </p>
         </section>
 
