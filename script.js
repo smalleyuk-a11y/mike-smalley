@@ -261,5 +261,68 @@ window.addEventListener('scroll', function() {
 }( jQuery ) );
 
 
+// --- TABBED MEDIA CAROUSEL ---
+// Add this at the end of script.js
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.media-carousel').forEach(carousel => {
+        const viewport = carousel.querySelector('.media-carousel-viewport');
+        const tabs = Array.from(carousel.querySelectorAll('.media-carousel-tab'));
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let current = 0;
 
+        const tabList = carousel.querySelector('.media-carousel-tabs');
 
+        function setActive(index) {
+            current = index;
+            tabs.forEach((tab, i) => {
+                const active = i === index;
+                tab.classList.toggle('is-active', active);
+                tab.setAttribute('aria-selected', active);
+                tab.tabIndex = active ? 0 : -1;
+            });
+
+            // On mobile the tab strip scrolls sideways: centre the active tab.
+            // (Does nothing on desktop, where the tabs all fit.)
+            const tab = tabs[index];
+            tabList.scrollTo({
+                left: tab.offsetLeft - (tabList.clientWidth - tab.offsetWidth) / 2,
+                behavior: reduceMotion ? 'auto' : 'smooth'
+            });
+        }
+
+        function goTo(index) {
+            setActive(index);
+            viewport.scrollTo({
+                left: index * viewport.clientWidth,
+                behavior: reduceMotion ? 'auto' : 'smooth'
+            });
+        }
+
+        // Click a tab to change slide
+        tabs.forEach((tab, i) => tab.addEventListener('click', () => goTo(i)));
+
+        // Arrow keys / Home / End move between tabs
+        tabList.addEventListener('keydown', e => {
+            let next = null;
+            if (e.key === 'ArrowRight') next = (current + 1) % tabs.length;
+            if (e.key === 'ArrowLeft') next = (current - 1 + tabs.length) % tabs.length;
+            if (e.key === 'Home') next = 0;
+            if (e.key === 'End') next = tabs.length - 1;
+            if (next === null) return;
+            e.preventDefault();
+            tabs[next].focus();
+            goTo(next);
+        });
+
+        // Swiping or trackpad-scrolling the image updates the active tab
+        viewport.addEventListener('scroll', () => {
+            const index = Math.round(viewport.scrollLeft / viewport.clientWidth);
+            if (index !== current && tabs[index]) setActive(index);
+        }, { passive: true });
+
+        // Keep the position correct when the window is resized
+        window.addEventListener('resize', () => {
+            viewport.scrollTo({ left: current * viewport.clientWidth, behavior: 'auto' });
+        });
+    });
+});
